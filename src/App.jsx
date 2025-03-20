@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./components/LoginPage";
+import SignUpPage from "./components/SignUpPage";
 
 function App() {
   const [isSettingUp, setIsSettingUp] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           />
           <Route path="/seo-page" element={<SeoPage />} />
           <Route path="/login-page" element={<LoginPage />} />
+          <Route path="/signup-page" element={<SignUpPage />} />
         </Routes>
       </main>
 

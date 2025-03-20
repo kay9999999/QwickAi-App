@@ -10,14 +10,16 @@ const Login = () => {
     <div className="relative flex min-h-screen flex-col justify-center bg-gray-50 bg-[radial-gradient(circle_at_bottom,rgba(77,145,225,0.23)_8%,transparent_60%)] py-6 sm:py-12">
       {/* Header */}
       <div className="absolute top-6 left-0 right-0 px-6 flex items-center justify-between">
-        <img
-          src="/images/qwick-logo.png"
-          alt="Qwick.ai"
-          className="h-8 object-contain"
-          loading="lazy"
-        />
+        <a href="/">
+          <img
+            src="/images/qwick-logo.png"
+            alt="Qwick.ai"
+            className="h-8 object-contain"
+            loading="lazy"
+          />
+        </a>
         <a
-          href="#"
+          href="/signup-page"
           className="flex items-center rounded shadow text-sm py-2 px-4 text-[#225FC3] hover:bg-gray-100 transition-colors"
         >
           Sign up
