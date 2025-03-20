@@ -61,7 +61,7 @@ function HomePage({ isSettingUp, onStartClick }) {
           step();
           if (index === steps.length - 1) {
             setTimeout(() => {
-              navigate("/SeoPage");
+              navigate("/seo-page");
             }, 1500);
           }
         }, index * 3000);
@@ -80,7 +80,7 @@ function HomePage({ isSettingUp, onStartClick }) {
             Qwick.ai
           </a>
           <a
-            href="#"
+            href="/login-page"
             className="text-purple-600 text-lg border border-gray-300 bg-white rounded-lg flex items-center gap-2 p-2"
           >
             Login

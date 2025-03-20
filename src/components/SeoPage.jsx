@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 import { FiRefreshCw } from "react-icons/fi";
 import { MdPhoneIphone } from "react-icons/md";
@@ -93,6 +94,11 @@ function ScoreCard({ title, link, scores, activeDevice, onDeviceChange }) {
 }
 
 function SeoPage() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/login-page");
+  };
   //  scores for CURRENT SCORE
   const currentScoresMobile = [
     {
@@ -253,7 +259,10 @@ function SeoPage() {
         <h1 className="text-lg sm:text-2xl font-semibold text-gray-800">
           SEO OPTIMISER
         </h1>
-        <button className="bg-white flex items-center font-semibold text-gray-800 px-3 py-1.5 rounded shadow border border-gray-200 hover:bg-gray-50">
+        <button
+          onClick={handleLogin}
+          className="cursor-pointer bg-white flex items-center font-semibold text-gray-800 px-3 py-1.5 rounded shadow border border-gray-200 hover:bg-gray-50"
+        >
           LOGIN
           <GoArrowRight className="pt-1 pl-1" size={20} />
         </button>
