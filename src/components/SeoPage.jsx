@@ -247,7 +247,7 @@ function SeoPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-white bg-[radial-gradient(circle_at_bottom,_rgba(25,33,61,0.2)_10%,_transparent_60%)]">
       {/* header */}
       <header className="w-full bg-white border-b border-gray-200 flex items-center justify-between px-4 sm:px-6 py-4">
         <h1 className="text-lg sm:text-2xl font-semibold text-gray-800">
@@ -344,13 +344,13 @@ function SeoPage() {
 
         {/* right column */}
         <div className="w-full lg:w-[30%]">
-          <div className="bg-white rounded-md shadow p-4 h-full flex flex-col items-center">
+          <div className="  p-2 h-full flex flex-col items-center ">
             <h2 className="text-[20px] font-semibold text-[#333333] mb-3 text-center">
               Preview
             </h2>
 
             {/* chat */}
-            <div className="relative w-[320px] h-[650px] flex flex-col overflow-hidden">
+            <div className="relative w-[320px] h-[800px] flex flex-col overflow-hidden">
               <div className="absolute inset-0 border-[1.2px] border-[#BEC1C5] rounded-[20px] pointer-events-none">
                 <div className="absolute inset-[8px] border-[4px] border-[#0E3D8C] rounded-[12px] pointer-events-none">
                   <div className="relative z-10 flex flex-col w-full h-full bg-white rounded-[20px] overflow-hidden">
@@ -386,7 +386,7 @@ function SeoPage() {
                     </div>
 
                     {/* chat area */}
-                    <div className="flex-1 px-3 mt-[140px] space-y-3">
+                    <div className="flex-1 px-3 mt-[300px] space-y-3">
                       <div className="flex items-end space-x-2">
                         {/* avatar */}
                         <img

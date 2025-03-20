@@ -72,7 +72,7 @@ function HomePage({ isSettingUp, onStartClick }) {
   if (isSettingUp) {
     return (
       <div
-        className="min-h-screen bg-white bg-[radial-gradient(ellipse_at_bottom,rgba(0,0,0,0.1)_0%,transparent_60%)] flex flex-col
+        className="min-h-screen bg-white bg-[radial-gradient(circle_at_bottom,rgba(25,33,61,0.1)_10%,transparent_60%)] flex flex-col
 "
       >
         <header className="flex justify-between items-center p-5">
