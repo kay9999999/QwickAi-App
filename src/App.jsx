@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./components/LoginPage";
-import SignUpPage from "./components/SignupPage";
+import SignUpPage from "./components/SignUpPage";
 import PagesDashboard from "./components/PagesDashboard";
 import ThankyouPage from "./components/ThankyouPage";
 import TermsAndConditions from "./components/TermsAndConditions";
