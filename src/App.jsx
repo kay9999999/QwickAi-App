@@ -6,10 +6,10 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./components/LoginPage";
 import SignUpPage from "./components/SignupPage";
-import SEMLandingPage from "./components/SemPage";
 import PagesDashboard from "./components/PagesDashboard";
 import ThankyouPage from "./components/ThankyouPage";
 import TermsAndConditions from "./components/TermsAndConditions";
+import SemPage from "./components/SemPage";
 
 function App() {
   const [isSettingUp, setIsSettingUp] = useState(false);
@@ -37,6 +37,7 @@ function App() {
           <Route path="/dashboard-page" element={<PagesDashboard />} />
           <Route path="/thankyou-page" element={<ThankyouPage />} />
           <Route path="/terms-conditions" element={<TermsAndConditions />} />
+          <Route path="/sem-page" element={<SemPage />} />
         </Routes>
       </main>
 
