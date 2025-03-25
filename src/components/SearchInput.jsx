@@ -38,7 +38,7 @@ function SearchInput({ onStartClick }) {
             <input
               type="text"
               placeholder="Type your URL or Site Map"
-              className="flex-1 ml-7 text-xl text-black text-opacity-40 bg-transparent outline-none max-md:ml-4 max-md:text-lg max-sm:ml-4 max-sm:text-base"
+              className="flex-1 ml-7 text-base md:text-xl text-black text-opacity-40 bg-transparent outline-none max-md:ml-4 max-md:text-lg max-sm:ml-4 max-sm:text-base"
             />
           </div>
           <div className="relative h-[50px] w-[178px] ml-auto max-md:w-[177px] max-sm:w-full max-sm:h-[40px] max-sm:ml-0">
