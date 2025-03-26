@@ -49,9 +49,9 @@ const SemPage = () => {
   const allPointsLoaded = isAllSet || currentPair >= totalPairs;
 
   return (
-    <div className="bg-gray-50 flex flex-col lg:flex-row items-start justify-start p-1 h-[796px] rounded-2xl border border-[#F0F2F5] pb-6 gap-4 max-w-[1400px] mx-auto">
+    <div className="bg-white flex flex-col lg:flex-row items-start justify-start p-1 min-h-[796px] rounded-2xl border border-[#F0F2F5] pb-6 gap-4 max-w-[1400px] mx-auto">
       {/* Main-Content */}
-      <div className="w-full lg:max-w-[950px] bg-white rounded-lg shadow-md">
+      <div className="w-full lg:max-w-[950px]  rounded-lg shadow-md">
         <div className="flex space-x-4 mb-4 rounded-lg border-b border-[#E3E6EA] pt-[12px] pb-[12px] px-4">
           <button className="bg-[#625DCD] text-white w-[102px] h-[37px] rounded-lg gap-2 py-2 px-3">
             SEM Page
@@ -178,7 +178,7 @@ const SemPage = () => {
                             className="w-full h-full object-contain"
                           />
                         ) : (
-                          <PiSpinner className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 animate-spin text-[#7A7A7A]transition-opacity duration-500" />
+                          <PiSpinner className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 animate-spin text-[#7A7A7A] transition-opacity duration-500" />
                         )
                       ) : null}
                     </div>
@@ -238,7 +238,7 @@ const SemPage = () => {
                               className="w-full h-full object-contain"
                             />
                           ) : (
-                            <PiSpinner className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 animate-spin text-[#7A7A7A]transition-opacity duration-500" />
+                            <PiSpinner className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 animate-spin text-[#7A7A7A] transition-opacity duration-500" />
                           )
                         ) : null}
                       </div>
@@ -267,11 +267,7 @@ const SemPage = () => {
       </div>
 
       {/* Qwick-Chat Component*/}
-      {/* <div className=" w-[340px] mt-4 lg:mt-0">
-        <QwickChat currentPair={currentPair} />
-      </div> */}
-
-      <div className="w-[90%] min-w-[340px] sm:w-[400px] mt-4 lg:mt-0 mx-auto">
+      <div className="w-[90%] min-w-[340px] sm:w-[400px] mt-4 lg:mt-0  mx-auto">
         <QwickChat currentPair={currentPair} />
       </div>
 

@@ -4,80 +4,65 @@ import { AiOutlineCopy } from "react-icons/ai";
 import { HiOutlineInformationCircle } from "react-icons/hi";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
+import { CiSettings } from "react-icons/ci";
+
+import Logo from "./Logo";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between w-full h-16 bg-white border-b border-gray-200 px-2 md:px-4">
-      {/* Left: Brand + Tabs */}
-
-      {/* Logo / Brand Name */}
-      <div className="flex items-center ">
-        {/* Replace with your actual logo if desired */}
-        <img src="/images/logo-black.png" alt="Qwick.ai" className=" h-7" />
+    <header className="flex items-center justify-between w-full h-16 bg-white border-b border-gray-200 px-4 md:px-6">
+      {/* Left: Logo / Brand Name */}
+      <div className="flex items-center">
+        <Logo color="#191D23" className="w-36 h-36" />
       </div>
 
-      <div className="flex w-full max-w-[168px] sm:max-w-[468px]">
-        {/* Center: Search Bar */}
-        <div className=" flex-1 mx-2 ">
-          <div className="relative ">
-            <FiSearch
-              size={16}
-              className="absolute left-2 top-[19px] -translate-y-1/2 text-gray-400"
-            />
-            <input
-              type="text"
-              placeholder="Search for pages by title, page ID, agent name, or creation date."
-              className="w-full  pl-7  py-2.5 text-xs border border-[#E4E6EF] rounded-[9px] focus:outline-none focus:ring-1 focus:ring-[#333333] focus:border-[#333333]"
-            />
-          </div>
-        </div>
+      {/* Right: Icons */}
+      <div className="flex items-center space-x-4">
+        {/* Search Icon */}
+        <button type="button" className="p-2 rounded-full hover:bg-gray-100">
+          <FiSearch size={20} className="text-[#5E6278]" />
+        </button>
 
-        {/* Right: Profile Icon (or any other icons) */}
-        <div className="flex items-center space-x-2">
-          <button
-            type="button"
-            className="p-2 border-[1px] border-[#E4E6EF] rounded-[9px] text-[#5E6278] "
-            title="Profile"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-            >
-              <circle
-                cx="12"
-                cy="8"
-                r="4"
-                fill="#5E6278"
-                fillOpacity="0.3"
-              ></circle>
+        {/* Country Flag */}
+        <img
+          src="/images/country.png"
+          alt="Country Flag"
+          className="w-6 h-6 rounded-full object-cover"
+        />
 
-              <path
-                fill="#5E6278"
-                d="M5.338 17.32C5.999 14.528 8.772 13 11.643 13h.714c2.871 0 5.644 1.527 6.305 4.32c.128.541.23 1.107.287 1.682c.055.55-.397.998-.949.998H6c-.552 0-1.004-.449-.949-.998c.057-.575.159-1.14.287-1.681"
-              ></path>
-            </svg>
-          </button>
-          <button
-            type="button"
-            className="p-2 border-[1px] border-[#E4E6EF] rounded-[9px] text-[#5E6278] bg-[#625DCD]"
-            title="Profile"
+        {/* Profile Icon */}
+        <button
+          type="button"
+          className="p-2 rounded-full hover:bg-gray-100"
+          title="Profile"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-            >
-              <path
-                fill="rgba(255, 255, 255, 0.3)"
-                d="M5 18a1 1 0 0 1-.894-1.447L6 12.764V10c0-3.728 2.55-6.86 6-7.748c3.45.888 6 4.02 6 7.748v2.764l1.894 3.789A1 1 0 0 1 19 18z"
-              />
-              <path fill="#FFFFFF" d="M8.126 19a4.002 4.002 0 0 0 7.748 0z" />
-            </svg>
-          </button>
-        </div>
+            <path
+              fill="#5E6278"
+              fillOpacity="0.3"
+              d="M5 18a1 1 0 0 1-.894-1.447L6 12.764V10c0-3.728 2.55-6.86 6-7.748c3.45.888 6 4.02 6 7.748v2.764l1.894 3.789A1 1 0 0 1 19 18z"
+            />
+            <path fill="#5E6278" d="M8.126 19a4.002 4.002 0 0 0 7.748 0z" />
+          </svg>
+        </button>
+
+        {/* Settings Icon */}
+        <button type="button" className="p-2 rounded-full hover:bg-gray-100">
+          <CiSettings size={22} strokeWidth={0.8} className="text-[#5E6278]" />
+        </button>
+
+        {/* Account Image */}
+        <img
+          src="/images/account-img.png"
+          alt="Account"
+          className="w-10 h-10 rounded-full border border-gray-300 object-cover"
+        />
       </div>
     </header>
   );
