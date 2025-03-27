@@ -12,7 +12,7 @@ const MetricCards = () => {
   ];
 
   return (
-    <div className="mb-6 sm:mb-8 overflow-hidden">
+    <div className=" overflow-hidden p-2">
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 font-jakarta">
         {metrics.map((metric) => (
           <div

@@ -27,19 +27,19 @@ const Dashboard = () => {
         </div>
 
         {/* Main Content Container */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="bg-white rounded-lg shadow">
           {/* Metrics Cards  */}
-          <div className="bg-white rounded-lg shadow p-3 sm:p-4 lg:p-6">
+          <div className="rounded-tl-lg rounded-tr-lg p-3">
             <MetricCards />
           </div>
 
           {/* Charts Section  */}
-          <div className="bg-white rounded-lg shadow p-3 sm:p-4 lg:p-6">
+          <div>
             <ChartSection />
           </div>
 
           {/* Lead Section  */}
-          <div className="bg-white rounded-lg shadow p-3 sm:p-4 lg:p-6 overflow-x-auto">
+          <div className="rounded-bl-lg rounded-br-lg p-3 sm:p-4 lg:p-6">
             <LeadSection />
           </div>
         </div>
