@@ -320,25 +320,22 @@ const PagesDashboard = () => {
 
                   <div className=" mx-1 my-4 border border-[#BEC1C5]"></div>
 
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex flex-col sm:flex-row items-center justify-between mb-4 space-y-2 sm:space-y-0">
                     <h3 className="text-base md:text-lg font-semibold text-[#333333]">
                       Want to edit your SEM page?
                     </h3>
                     {/* Right side: toggle + button */}
-                    <div className="flex items-center space-x-4">
-                      {/* Toggle label */}
+                    <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                      {/* Toggle label group */}
                       <div className="flex items-center space-x-2">
                         <span className="text-sm text-[#625DCD] font-medium">
                           Smart AI Mode
                         </span>
-
                         {/* Toggle Switch */}
                         <Switch
                           checked={enabled}
                           onChange={setEnabled}
-                          className={`
-                      
-                         relative border border-[#BEC1C5] inline-flex h-5 w-9 items-center rounded-[70px] transition-colors focus:outline-none`}
+                          className="relative border border-[#BEC1C5] inline-flex h-5 w-9 items-center rounded-full transition-colors focus:outline-none"
                         >
                           <span
                             className={`${
@@ -346,18 +343,16 @@ const PagesDashboard = () => {
                             } inline-block h-3 w-3 transform rounded-full bg-[#625DCD] transition-transform`}
                           />
                         </Switch>
-
-                        <span className="text-sm  text-[#7A7A7A] ">
+                        <span className="text-sm text-[#7A7A7A]">
                           Customize manually
                         </span>
                       </div>
-
                       {/* Advance button */}
                       <button
                         type="button"
-                        className="bg-[#625DCD]  text-white rounded-lg px-4 py-2 text-sm font-medium "
+                        className="bg-[#625DCD] text-white rounded-lg px-4 py-2 text-sm font-medium"
                       >
-                        <span className="flex gap-1.5">
+                        <span className="flex items-center gap-1.5">
                           Advance
                           <FiSettings size={20} />
                         </span>
