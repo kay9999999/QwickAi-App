@@ -3,8 +3,11 @@ import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
 
 const GoogleSignInPopup = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (isOpen) {
       const originalStyle = window.getComputedStyle(document.body).overflow;
@@ -70,7 +73,10 @@ const GoogleSignInPopup = ({ isOpen, onClose }) => {
             </div>
           </div>
 
-          <button className="w-full sm:w-[400px] h-12 sm:h-14 bg-[#1A73E8] text-white py-2 my-4 rounded-lg hover:bg-[#1A73E8] font-bold text-base sm:text-lg leading-none tracking-normal text-center cursor-pointer">
+          <button
+            onClick={() => navigate("/my-pages/page")}
+            className="w-full sm:w-[400px] h-12 sm:h-14 bg-[#1A73E8] text-white py-2 my-4 rounded-lg hover:bg-[#1A73E8] font-bold text-base sm:text-lg leading-none tracking-normal text-center cursor-pointer"
+          >
             Continue as Augustine
           </button>
 

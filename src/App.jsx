@@ -10,7 +10,8 @@ import PagesDashboard from "./components/PagesDashboard";
 import ThankyouPage from "./components/ThankyouPage";
 import TermsAndConditions from "./components/TermsAndConditions";
 import SemPage from "./components/SemPage";
-
+import Dashboard from "./components/DashBoard/DashBoard";
+import MyPages from "./components/MyPages";
 function App() {
   const [isSettingUp, setIsSettingUp] = useState(false);
 
@@ -19,8 +20,8 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-grow bg-white">
+    <div>
+      <main className=" bg-white">
         <Routes>
           <Route
             path="/"
@@ -34,10 +35,12 @@ function App() {
           <Route path="/seo-page" element={<SeoPage />} />
           <Route path="/login-page" element={<LoginPage />} />
           <Route path="/signup-page" element={<SignUpPage />} />
-          <Route path="/dashboard-page" element={<PagesDashboard />} />
+          <Route path="/my-pages/page" element={<PagesDashboard />} />
           <Route path="/thankyou-page" element={<ThankyouPage />} />
           <Route path="/terms-conditions" element={<TermsAndConditions />} />
           <Route path="/sem-page" element={<SemPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/my-pages" element={<MyPages />} />
         </Routes>
       </main>
 
