@@ -13,262 +13,23 @@ import { GoArrowLeft } from "react-icons/go";
 import { GoLink } from "react-icons/go";
 import { CiShare1 } from "react-icons/ci";
 import { Switch } from "@headlessui/react";
-import Logo from "./Logo";
 import { MdPictureInPictureAlt } from "react-icons/md";
 import { CgListTree } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
-
-export const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-  return (
-    <header className="relative w-full bg-white border-b border-gray-200 px-4  md:px-6">
-      {/* Main Header Row */}
-      <div className="flex items-center justify-between h-16">
-        {/* Left: Logo */}
-        <div className="flex items-center">
-          <a href="/">
-            <Logo color="#191D23" className="w-28 md:w-36" />
-          </a>
-        </div>
-
-        {/* Right: Desktop Icons (visible on sm and up) */}
-        <div className="hidden sm:flex items-center space-x-4">
-          <button type="button" className=" rounded-full hover:bg-gray-100">
-            <FiSearch size={20} className="text-[#5E6278]" />
-          </button>
-          <img
-            src="/images/country.png"
-            alt="Country Flag"
-            className="w-5 h-5 rounded-full object-cover "
-          />
-          <button
-            type="button"
-            className=" rounded-full hover:bg-gray-100"
-            title="Profile"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                fill="#5E6278"
-                fillOpacity="0.3"
-                d="M5 18a1 1 0 0 1-.894-1.447L6 12.764V10c0-3.728 2.55-6.86 6-7.748c3.45.888 6 4.02 6 7.748v2.764l1.894 3.789A1 1 0 0 1 19 18z"
-              />
-              <path fill="#5E6278" d="M8.126 19a4.002 4.002 0 0 0 7.748 0z" />
-            </svg>
-          </button>
-          <button type="button" className=" rounded-full hover:bg-gray-100">
-            <FiSettings size={20} strokeWidth={2} className="text-[#5E6278]" />
-          </button>
-          <img
-            src="/images/account-img.png"
-            alt="Account"
-            className="w-10 h-10 rounded-full border border-gray-300 object-cover"
-          />
-          <div className="flex flex-col text-[#333333] text-sm space-y-1">
-            <span className="font-normal">Admin</span>
-            <span className="font-semibold">Carolyn Perkins</span>
-          </div>
-        </div>
-
-        {/* Right: Mobile Hamburger (visible below sm) */}
-        <div className="sm:hidden">
-          <button
-            onClick={toggleMenu}
-            type="button"
-            className="p-2 rounded-full hover:bg-gray-100"
-          >
-            {isMenuOpen ? (
-              <FiX size={24} className="text-[#5E6278]" />
-            ) : (
-              <FiMenu size={24} className="text-[#5E6278]" />
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      {isMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white shadow-md border-t border-gray-200 z-50">
-          <div className="px-4 py-3">
-            <ul className="space-y-4">
-              <li className="flex items-center">
-                <FiSearch size={20} className="text-[#5E6278] mr-2" />
-                <span className="text-sm text-[#5E6278]">Search</span>
-              </li>
-              <li className="flex items-center">
-                <img
-                  src="/images/country.png"
-                  alt="Country Flag"
-                  className="w-5 h-5 rounded-full object-cover mr-2"
-                />
-                <span className="text-sm text-[#333333]">Country</span>
-              </li>
-              <li className="flex items-center">
-                <button
-                  type="button"
-                  className="flex items-center rounded hover:bg-gray-100"
-                  title="Profile"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      fill="#5E6278"
-                      fillOpacity="0.3"
-                      d="M5 18a1 1 0 0 1-.894-1.447L6 12.764V10c0-3.728 2.55-6.86 6-7.748c3.45.888 6 4.02 6 7.748v2.764l1.894 3.789A1 1 0 0 1 19 18z"
-                    />
-                    <path
-                      fill="#5E6278"
-                      d="M8.126 19a4.002 4.002 0 0 0 7.748 0z"
-                    />
-                  </svg>
-                  <span className="text-sm ml-2">Profile</span>
-                </button>
-              </li>
-              <li className="flex items-center">
-                <button
-                  type="button"
-                  className="flex items-center  rounded hover:bg-gray-100"
-                >
-                  <FiSettings
-                    size={18}
-                    strokeWidth={2}
-                    className="text-[#5E6278] mr-2"
-                  />
-                  <span className="text-sm">Settings</span>
-                </button>
-              </li>
-              <li className="flex items-center">
-                <img
-                  src="/images/account-img.png"
-                  alt="Account"
-                  className="w-10 h-10 rounded-full border border-gray-300 object-cover mr-2"
-                />
-                <div className="flex flex-col text-sm space-y-1 text-[#333333]">
-                  <span className="font-normal">Admin</span>
-                  <span className="font-semibold">Carolyn Perkins</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      )}
-    </header>
-  );
-};
+import HeaderSection from "../components/DashBoard/HeaderSection";
 
 const PagesDashboard = () => {
   const navigate = useNavigate();
-
   const [enabled, setEnabled] = useState(true);
-  const [activeButton, setActiveButton] = useState("");
-
-  // Mapping of button names to their respective route paths
-  const buttonRoutes = {
-    Dashboard: "/dashboard",
-    "My Pages": "/my-pages",
-    Versions: "/versions",
-    Agents: "/agents",
-    Template: "/template",
-    Settings: "/settings",
-  };
-
-  const handleClick = (buttonName) => {
-    setActiveButton(buttonName);
-
-    if (buttonRoutes[buttonName]) {
-      navigate(buttonRoutes[buttonName]);
-    }
-  };
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800  ">
       <div className="shadow-lg border-[#F0F2F5] rounded-2xl overflow-hidden">
         {/* Top Navbar */}
-        <Header />
+        <HeaderSection />
 
         {/* Main Content */}
         <main className=" flex flex-col bg-[#F1F2F5]">
-          <div className="bg-white px-4 py-2 flex flex-wrap justify-center sm:justify-start items-center gap-2 sm:gap-3 text-sm text-[#666F8D] font-semibold shadow-md">
-            <button
-              onClick={() => handleClick("Dashboard")}
-              className={`flex items-center space-x-1 py-2 px-2 rounded cursor-pointer ${
-                activeButton === "Dashboard"
-                  ? "text-[#4F46E5] font-semibold"
-                  : "text-[#666F8D] font-medium"
-              }`}
-            >
-              <AiOutlineAppstoreAdd size={20} />
-              <span>Dashboard</span>
-            </button>
-            <button
-              onClick={() => handleClick("My Pages")}
-              className={`flex items-center space-x-1 py-2 px-2 rounded cursor-pointer ${
-                activeButton === "My Pages"
-                  ? "text-[#4F46E5] font-semibold"
-                  : "text-[#666F8D] font-medium"
-              }`}
-            >
-              <GrCopy size={18} />
-              <span>My Pages</span>
-            </button>
-            <button
-              onClick={() => handleClick("Versions")}
-              className={`flex items-center space-x-1 py-2 px-2 rounded cursor-pointer ${
-                activeButton === "Versions"
-                  ? "text-[#4F46E5] font-semibold"
-                  : "text-[#666F8D] font-medium"
-              }`}
-            >
-              <GoStack size={20} />
-              <span>Versions</span>
-            </button>
-            <button
-              onClick={() => handleClick("Agents")}
-              className={`flex items-center space-x-1 py-2 px-2 rounded cursor-pointer ${
-                activeButton === "Agents"
-                  ? "text-[#4F46E5] font-semibold"
-                  : "text-[#666F8D] font-medium"
-              }`}
-            >
-              <MdSupportAgent size={20} />
-              <span>Agents</span>
-            </button>
-            <button
-              onClick={() => handleClick("Template")}
-              className={`flex items-center space-x-1 py-2 px-2 rounded cursor-pointer ${
-                activeButton === "Template"
-                  ? "text-[#4F46E5] font-semibold"
-                  : "text-[#666F8D] font-medium"
-              }`}
-            >
-              <TbTemplate size={20} />
-              <span>Template</span>
-            </button>
-            <button
-              onClick={() => handleClick("Settings")}
-              className={`flex items-center space-x-1 py-2 px-2 rounded cursor-pointer ${
-                activeButton === "Settings"
-                  ? "text-[#4F46E5] font-semibold"
-                  : "text-[#666F8D] font-medium"
-              }`}
-            >
-              <FiSettings size={18} />
-              <span>Settings</span>
-            </button>
-          </div>
-
           {/* breadcrumbs  */}
           <div className="px-6 pt-4 flex flex-wrap items-center gap-[7px] text-sm">
             <RiHome6Line className="text-[#B5B5C3]" size={19} />
@@ -277,7 +38,6 @@ const PagesDashboard = () => {
             <GoDotFill className="text-[#B5B5C3]" />
             <span className="text-[#19213D] font-medium">PAGEIDA001</span>
           </div>
-
           <div className="flex flex-col lg:flex-row">
             {/* Left Content Area */}
 
